@@ -8,7 +8,8 @@ my_dict = {
     '7': '--...',
     '8': '---..',
     '9': '----.',
-    '0': '-----'
+    '0': '-----',
+    ' ': ' '
 }
 str_number = str(input(f'Enter the number: '))
 print(f'Number is {str_number}')
