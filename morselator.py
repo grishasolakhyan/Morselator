@@ -13,9 +13,13 @@ my_dict = {
 str_number = str(input(f'Enter the number: '))
 print(f'Number is {str_number}')
 len_str_number = len(str_number)
-morse_string = ''
-for i in range(len_str_number):
-    if str_number[i] in my_dict:
-        symb = my_dict[str_number[i]]
-        morse_string+=symb
-print(f'Morse line: {morse_string}')
+
+def morse_translator(dict):
+    morse_string = ''
+    for i in range(len_str_number):
+        if str_number[i] in dict:
+            symb = dict[str_number[i]]
+            morse_string += symb
+    return morse_string
+
+print(f'Morse line: {morse_translator(my_dict)}')
