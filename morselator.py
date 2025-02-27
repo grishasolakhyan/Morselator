@@ -10,8 +10,15 @@ def morse_translator(orig_str, dict):
     len_str_number = len(orig_str)
     morse_string = ''
     for i in range(len_str_number):
-        if orig_str[i] in dict:
-            symb = dict[orig_str[i]]
+
+        print(f'{orig_str[i]} -> {orig_str[i].isupper()}')
+        if orig_str[i].islower() == True:
+            symb_buffer = orig_str[i].upper()
+        else:
+            symb_buffer = orig_str[i]
+
+        if symb_buffer in dict:
+            symb = dict[symb_buffer]
             morse_string += symb
     return morse_string
 
